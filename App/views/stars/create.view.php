@@ -8,19 +8,19 @@ loadPartial('head')
     <h1 class="h3 mb-3 fw-normal">Create Form</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com">
+      <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com" required>
       <label for="floatingInput">Name</label>
     </div>
     <div class="form-floating">
-        <textarea class="form-control" id="description" name="description" rows="4" cols="56"></textarea>
+        <textarea class="form-control" id="description" name="description" rows="4" cols="56" required></textarea>
         <label for="floatingInput">Description</label>
     </div>
     <div class="form-floating">
-      <input type="text" class="form-control" id="distance" name="distance" placeholder="Password">
+      <input type="text" class="form-control" id="distance" name="distance" placeholder="Password" required>
       <label for="floatingPassword">LY from Earth</label>
     </div>
     <div class="form-floating">
-        <p>Upload an image <input type="file" id="uploadfile" name="uploadfile"></p>
+        <p>Upload an image <input type="file" id="uploadfile" name="uploadfile" required></p>
     </div>
     
     <button class="btn btn-primary w-100 py-2" type="submit">Create</button>
@@ -30,6 +30,11 @@ loadPartial('head')
             echo '<p>' . $error . '</p>';
            }
         }
+        if(!empty($fileErrors)) {
+          foreach($fileErrors as $error) {
+           echo '<p>' . $error . '</p>';
+          }
+       }
     ?>
   </form>
 </main>

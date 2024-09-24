@@ -35,7 +35,7 @@ class StarController {
         $fileErrors = [];
         $tempname = $_FILES['uploadfile']['tmp_name'];
         $name = $_FILES['uploadfile']['name'];
-        $target_file = basePath('public/images/uploads/' . $name);
+        $target_file = '/images/uploads/' . $name;
         $allowedFields = ['name', 'description', 'distance'];
         $newStarData = array_intersect_key($_POST, array_flip($allowedFields));
         $newStarData['user_id'] = 1;

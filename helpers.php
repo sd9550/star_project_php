@@ -16,7 +16,8 @@ function loadView($name, $data = []) {
         extract($data);
         require($viewPath);
     } else {
-        echo 'view error';
+        //echo 'Error - View not found';
+        exit('Error - View not found');
     }
 }
 
