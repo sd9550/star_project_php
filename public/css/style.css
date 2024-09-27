@@ -1,0 +1,32 @@
+body {
+    background-color: #282828;
+}
+
+div.show-bg {
+  background-color: white;
+}
+
+div.create-form, div.register-form {
+  max-width: 500px;
+  height: auto;
+  margin: 25px auto;
+}
+
+div.create-form h1, div.create-form p {
+  color: white;
+}
+
+img.thumb-star {
+    min-height: 299px;
+    max-height: 301px;
+}
+
+  h1.latest {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  a.star-link {
+    text-decoration: none;
+    color: black;
+  }
